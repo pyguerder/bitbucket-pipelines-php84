@@ -32,8 +32,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     curl \
     gnupg \
     make \
-    php8.2-mysql php8.2-zip php8.2-xml php8.2-mbstring php8.2-curl php8.2-pdo php8.2-tokenizer php8.2-cli php8.2-imap php8.2-intl php8.2-gd php8.2-xdebug php8.2-soap php8.2-apcu php8.2-redis \
-    apache2 libapache2-mod-php8.2 \
+    php8.3-mysql php8.3-zip php8.3-xml php8.3-mbstring php8.3-curl php8.3-pdo php8.3-tokenizer php8.3-cli php8.3-imap php8.3-intl php8.3-gd php8.3-xdebug php8.3-soap php8.3-apcu php8.3-redis \
+    apache2 libapache2-mod-php8.3 \
     --no-install-recommends && \
     apt-get clean -y && \
     apt-get autoremove -y && \
@@ -51,7 +51,7 @@ ENV LC_ALL     en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
 # Timezone & memory limit
-RUN echo "date.timezone=Europe/Paris" > /etc/php/8.2/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.2/apache2/php.ini
+RUN echo "date.timezone=Europe/Paris" > /etc/php/8.3/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.3/apache2/php.ini
 
 # Goto temporary directory.
 WORKDIR /tmp

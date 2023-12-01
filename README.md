@@ -1,12 +1,12 @@
-# Bitbucket Pipelines PHP 8.2 image
+# Bitbucket Pipelines PHP 8.3 image
 
-[![](https://images.microbadger.com/badges/version/pyguerder/bitbucket-pipelines-php82.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php82 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/pyguerder/bitbucket-pipelines-php82.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php82 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/pyguerder/bitbucket-pipelines-php83.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php83 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/pyguerder/bitbucket-pipelines-php83.svg)](https://microbadger.com/images/pyguerder/bitbucket-pipelines-php83 "Get your own image badge on microbadger.com")
 
 ## Based on Ubuntu 22.04
 
 ### Packages installed
 
-- `php8.2-zip`, `php8.2-xml`, `php8.2-mbstring`, `php8.2-curl`, `php8.2-json`, `php8.2-imap`, `php8.2-mysql`, `php8.2-tokenizer`, `php8.2-xdebug`, `php8.2-intl`, `php8.2-soap`, `php8.2-pdo`, `php8.2-cli`, `php8.2-apcu`, `php8.2-redis` and `php8.2-gd`
+- `php8.3-zip`, `php8.3-xml`, `php8.3-mbstring`, `php8.3-curl`, `php8.3-json`, `php8.3-imap`, `php8.3-mysql`, `php8.3-tokenizer`, `php8.3-xdebug`, `php8.3-intl`, `php8.3-soap`, `php8.3-pdo`, `php8.3-cli`, `php8.3-apcu`, `php8.3-redis` and `php8.3-gd`
 - wget, curl, unzip
 - Composer 2
 - Mysql 8
@@ -15,7 +15,7 @@
 ### Sample `bitbucket-pipelines.yml`
 
 ```YAML
-image: pyguerder/bitbucket-pipelines-php82
+image: pyguerder/bitbucket-pipelines-php83
 pipelines:
   default:
     - step:
