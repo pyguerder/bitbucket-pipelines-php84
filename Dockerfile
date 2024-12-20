@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 MAINTAINER Pierre-Yves Guerder <pierreyves.guerder@gmail.com>
 
@@ -32,8 +32,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     curl \
     gnupg \
     make \
-    php8.3-mysql php8.3-zip php8.3-xml php8.3-mbstring php8.3-curl php8.3-pdo php8.3-tokenizer php8.3-cli php8.3-imap php8.3-intl php8.3-gd php8.3-xdebug php8.3-soap php8.3-apcu php8.3-redis \
-    apache2 libapache2-mod-php8.3 \
+    php8.4-mysql php8.4-zip php8.4-xml php8.4-mbstring php8.4-curl php8.4-pdo php8.4-tokenizer php8.4-cli php8.4-imap php8.4-intl php8.4-gd php8.4-xdebug php8.4-soap php8.4-apcu php8.4-redis \
+    apache2 libapache2-mod-php8.4 \
     --no-install-recommends && \
     apt-get clean -y && \
     apt-get autoremove -y && \
@@ -51,7 +51,7 @@ ENV LC_ALL     en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
 # Timezone & memory limit
-RUN echo "date.timezone=Europe/Paris" > /etc/php/8.3/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.3/apache2/php.ini
+RUN echo "date.timezone=Europe/Paris" > /etc/php/8.4/cli/conf.d/date_timezone.ini && echo "memory_limit=1G" >> /etc/php/8.4/apache2/php.ini
 
 # Goto temporary directory.
 WORKDIR /tmp
